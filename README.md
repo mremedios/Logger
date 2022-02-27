@@ -1,6 +1,3 @@
-[![pipeline status](https://gitlab.com/mremedios/logger/badges/solution/pipeline.svg)](https://gitlab.com/mremedios/logger/-/commits/solution)
-[![coverage report](https://gitlab.com/mremedios/logger/badges/solution/coverage.svg)](https://gitlab.com/mremedios/logger/-/commits/solution)
-
 # Logger
 
 Для использования скачать пакет `logger`
@@ -31,7 +28,7 @@
 
 
 Пример создания своего логгера:
-```aidl
+```
     val handler = new Handler(
       new StreamPrinter(System.out),
       new Formatter(enableLevel = true, enableDate = false, enableComponent = false),
@@ -44,7 +41,7 @@
 ```
 Логгер может иметь любое количество `handler`'ов с различными способами вывода и форматирования сообщения.\
 Для быстрого создания `handler` можно воспользовать классом `HandlerBuilder`
-```aidl
+```
    HandlerBuilder.builder
       .addLevel()
       .addDate()
@@ -54,7 +51,7 @@
 ```
 
 Создание лога:
-```aidl
+```
     log.log(LogLevel.warning, "some log message");
     
     или
